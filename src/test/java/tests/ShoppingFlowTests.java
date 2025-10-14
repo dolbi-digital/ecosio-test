@@ -1,11 +1,9 @@
 package tests;
 
 import core.BaseTest;
-import core.Browser;
 import org.testng.annotations.Test;
 import pages.*;
 
-import static core.BaseTest.driver;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -32,7 +30,7 @@ public class ShoppingFlowTests extends BaseTest {
     }
 
     @Test
-    public void remove_item_from_cart() throws InterruptedException {
+    public void remove_item_from_cart() {
         LoginPage login = new LoginPage(driver());
         login.login("standard_user", "secret_sauce");
         InventoryPage inv = new InventoryPage(driver());
