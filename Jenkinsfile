@@ -15,6 +15,7 @@ pipeline {
       steps {
         sh """
           mvn -B -U \
+            -Dallure.results.directory=target/allure-results \
             -Dsurefire.suiteXmlFiles=Headless.xml \
             -Dbrowser=CHROME \
             -Dheadless=true \
