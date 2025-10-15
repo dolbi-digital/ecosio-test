@@ -14,8 +14,8 @@ pipeline {
     stage('Run Headless suite') {
       steps {
         sh """
+        sh 'rm -rf allure-results target/allure-results || true'
           mvn -B -U \
-            -Dallure.results.directory=target/allure-results \
             -Dsurefire.suiteXmlFiles=Headless.xml \
             -Dbrowser=CHROME \
             -Dheadless=true \
