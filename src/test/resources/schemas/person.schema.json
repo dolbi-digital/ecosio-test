@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SWAPI Person",
+  "type": "object",
+  "required": [
+    "name","height","mass","hair_color","skin_color","eye_color",
+    "birth_year","gender","homeworld","films","species","vehicles",
+    "starships","created","edited","url"
+  ],
+  "properties": {
+    "name":       { "type": "string", "minLength": 1 },
+    "height":     { "type": "string" },
+    "mass":       { "type": "string" },
+    "hair_color": { "type": "string" },
+    "skin_color": { "type": "string" },
+    "eye_color":  { "type": "string" },
+    "birth_year": { "type": "string" },
+    "gender":     { "type": "string" },
+    "homeworld":  { "type": "string", "pattern": "^https://swapi\\.dev/api/planets/\\d+/?$" },
+    "films":      { "type": "array", "pattern": "^https://swapi\\.dev/api/films/\\d+/?$" },
+    "species":    { "type": "array", "pattern": "^https://swapi\\.dev/api/species/\\d+/?$" },
+    "vehicles":   { "type": "array", "pattern": "^https://swapi\\.dev/api/vehicles/\\d+/?$" },
+    "starships":  { "type": "array", "pattern": "^https://swapi\\.dev/api/starships/\\d+/?$" },
+    "created":    { "type": "string" },
+    "edited":     { "type": "string" },
+    "url":        { "type": "string", "pattern": "^https://swapi\\.dev/api/people/\\d+/?$" }
+  },
+  "additionalProperties": true
+}

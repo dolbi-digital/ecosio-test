@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="API parallel" parallel="methods" thread-count="4">
+    <test name="SWAPI">
+        <packages>
+            <package name="api"/>
+        </packages>
+    </test>
+</suite>
