@@ -1,9 +1,9 @@
 package pages;
 
-import core.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
     public class CheckoutStepOnePage {
         @FindBy(id = "first-name") private WebElement firstName;
@@ -11,10 +11,7 @@ import org.openqa.selenium.support.*;
         @FindBy(id = "postal-code") private WebElement postalCode;
         @FindBy(id = "continue") private WebElement continueBtn;
 
-        private final WebDriver driver;
-
         public CheckoutStepOnePage(WebDriver driver) {
-            this.driver = driver;
             PageFactory.initElements(driver, this);
         }
 
@@ -25,4 +22,3 @@ import org.openqa.selenium.support.*;
             continueBtn.click();
         }
     }
-

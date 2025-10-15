@@ -2,11 +2,14 @@ package core;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+import utils.Config;
 
 import java.io.InputStream;
 import java.util.Properties;
 
 public class BaseTest {
+    public final String stdUser = Config.get("username");
+    public final String stdPass = Config.get("password");
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
     public static WebDriver driver() {
         return driverThreadLocal.get();

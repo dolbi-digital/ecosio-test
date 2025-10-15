@@ -1,17 +1,16 @@
 package pages;
 
-import core.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutCompletePage {
     @FindBy(css = ".complete-header") private WebElement completeHeader;
-    private final WebDriver driver;
 
     public CheckoutCompletePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this); }
+        PageFactory.initElements(driver, this);
+    }
 
     public boolean isOrderComplete() {
         try {

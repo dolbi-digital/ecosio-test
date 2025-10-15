@@ -1,8 +1,10 @@
 package pages;
 
-import core.BaseTest;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -22,10 +24,6 @@ public class CartPage {
         return cartItems.size();
     }
 
-    public void removeFirstItem() {
-        if (!cartItems.isEmpty()) removeBtn.click();
-    }
-
     public void removeItem(String productName) {
         WebElement removeButton = driver.findElement(By.xpath("//div[contains(.,'"
                 + productName + "')]/ancestor::div[@class='cart_item']//button"));
@@ -36,4 +34,3 @@ public class CartPage {
         checkoutBtn.click();
     }
 }
-
