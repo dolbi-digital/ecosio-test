@@ -80,6 +80,9 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>headless.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <allure.results.directory>target/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
 
